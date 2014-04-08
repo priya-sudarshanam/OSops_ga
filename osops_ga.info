@@ -1,0 +1,4 @@
+name = OpenScholar ops
+description = Displays most visited sites and most viewed pages
+core = 7.x
+files[] = osops_ga.module

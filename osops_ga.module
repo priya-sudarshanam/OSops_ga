@@ -1,4 +1,25 @@
-name = OpenScholar ops
-description = Displays most visited sites and most viewed pages
-core = 7.x
-files[] = osops_ga.module
+<?php
+
+/**
+ * hook_menu for osops_ga
+ */	
+function osops_ga_menu(){
+	
+    $items = array();
+    $items['osops'] = array(
+        'title' => 'OS Most Viewed',
+        'description' => 'Displays most visited sites and most viewed',
+        'page callback' => 'mostViewedShow', 
+		'access callback' => TRUE,
+		'type' => MENU_DEFAULT_LOCAL_TASK,
+		);
+	
+	return $items;
+}
+
+function mostViewedShow(){
+   $hello = 'hello';
+   return $hello;
+
+
+}
